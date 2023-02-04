@@ -1,26 +1,17 @@
-def sumsquare(l): 
-     odd=[] 
-     even=[] 
-     l2=[] 
-     for i in range(len(l)): 
-         if l[i]%2==0: 
-             even.append(l[i]) 
-         else: 
-             odd.append(l[i]) 
-     print(odd) 
-     print(even) 
-     odds=sum([x**2 for x in odd]) 
-     l2.append(odds) 
-     evens=sum([y**2 for y in even]) 
-     l2.append(evens) 
-     return l2 
-  
- n=int(input("enter the number :")) 
- l=[] 
- while True: 
-     num=int(input("enter the element:")) 
-     l.append(num) 
-     if len(l)==n: 
-         break 
- print(l) 
- print(sumsquare(l))
+def sumsquare(l):
+   odd=0
+   even=0
+   for i in l:
+       if i%2==0:
+           even = even + i**2
+       else:
+           odd = odd + i**2
+   l=[odd,even]
+   return(l)
+l=[]
+a=int(input("Enter number of elements: "))
+for i in range(0,a):
+    ele=int(input("Enter the value: "))
+    l.append(ele)
+print(l)
+print(sumsquare(l))
