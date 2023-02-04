@@ -1,10 +1,7 @@
-fresh=int(input("enter the number of fresh loves purchased:")) 
- old=int(input("enter the number of day old loves purchased:")) 
- regularprice=185 
- fresh1=regularprice*1.0*fresh 
- old1=regularprice*0.4*old 
- totalamount=fresh1+old1 
- print("Regular Price=%.2f" % regularprice) 
- print("Amount of new loaves=%.2f" % fresh1) 
- print("Amount of new loaves=%.2f" % old1) 
- print("Total Amount=%.2f" % totalamount)
+a=int(input("Number of Fresh Loaves purchased: "))
+b=int(input("Number of Day Old Loaves purchased: "))
+print("\n")
+print("Regular Price: Rs. 185")
+print("Amount of new loaves: ", a*185)
+print("Amount of day old loaves: ",(a*185)*(60/100))
+print("Total Amount to be paid: ",(a*185)+((a*185)*(60/100)))
