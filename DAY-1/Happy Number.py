@@ -1,16 +1,25 @@
-def happy(n): 
-    t=n 
-    sum=0 
-    while(t>0): 
-       d=t%10 
-       sum+=d**2 
-       t//=10 
-    return sum 
- n=int(input("enter the number:")) 
- r=n 
- while r!=1 and r!=4: 
-     r=(happy(r)) 
- if r==1: 
-     print("True") 
- elif r==4: 
-     print("False")
+def sumsquare(n):
+    sq=0
+    while(n!=0):
+        digit = n%10
+        sq+=digit*digit
+        n//=10
+    return sq
+
+def happy(n):
+    s=set()
+    s.add(n)
+    while(True):
+        if(n==1):
+            return True
+        n=sumsquare(n)
+        if n in s:
+            return False
+        s.add(n)
+    return False
+
+n=int(input("Enter a number: "))
+if(happy(n)):
+    print("YES, n is happy :)")
+else:
+    print("NO, n is sad :(")
